@@ -81,9 +81,9 @@
             while ($row = mysqli_fetch_assoc($result)){
 
 
-              echo "<div class=\"shadow-lg rounded-lg overflow-hidden\">";
-              echo "<img class=\"p-4\" src=\"images/gallery/" . $row['imgFullNameGallery'] . "\" alt=\"user image\" class=\"h-auto max-w-full\">";
-              echo "<h3 class='mt-4 text-lg font-semibold shadow-md p-2'>" . $row['titleGallery'] . "</h3>";
+              echo "<div class=\"shadow-lg rounded-lg overflow-hidden bg-white\">";
+              echo "<img class=\"p-3\" src=\"images/gallery/" . $row['imgFullNameGallery'] . "\" alt=\"user image\" class=\"h-auto max-w-full\">";
+              echo "<h3 class='text-4xl font-semibold shadow-md p-2'>" . $row['titleGallery'] . "</h3>";
               echo "<p class='p-2'>" . $row['descGallery'] . "</p>";
               echo "</div>";
             }
@@ -103,14 +103,14 @@
   </span>
   <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
       <li>
-          <a href="#" class="hover:underline me-4 md:me-6">About</a>
+          <a href="https://github.com/KrisMannino" class="hover:underline me-4 md:me-6">About</a>
       </li>
 
       <li>
-          <a href="#" class="hover:underline">Contact</a>
+          <a href="mailto:krismannino@gmail.com" class="hover:underline">Contact</a>
       </li>
       <li>
-        <a href="#" class="hover:underline me-4 md:me-6"><img src="images/Kris-Logo-512x512.png" alt="KRis' Logo" style="max-height: 25px;"></a>
+        <a href="https://krismannino.com/" class="hover:underline me-4 md:me-6"><img src="images/Kris-Logo-512x512.png" alt="KRis' Logo" style="max-height: 25px;"></a>
     </li>
   </ul>
 </footer>
