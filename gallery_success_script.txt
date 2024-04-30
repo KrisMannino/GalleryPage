@@ -1,0 +1,48 @@
+    <?php
+    Check if the 'upload' query parameter is set
+
+    if (isset($_GET['upload'])) {
+      $uploadStatus = htmlspecialchars($_GET['upload']);
+      if ($uploadStatus == 'success') {
+        echo "<h1 style='text-align: center; padding-top: 25px;'>Upload Successful!</h1>";
+      } else {
+        echo "<h1 style='text-align: center; padding-top: 25px;'>Upload Failed.</h1>";
+      }
+    }
+
+  ?>
+    <!-- Link to return to the gallery page itself for further actions -->
+    <div style="text-align: center; margin-top: 20px;">
+          <a href="gallery.php">Return to Gallery</a>
+        </div>
+
+
+
+<!-- Gallery Tailwindcss construct -->
+<?php
+echo "<div class=\"grid grid-cols-2 md:grid-cols-4 gap-4\">
+      <div class=\"grid gap-4\">
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg\" alt=\"\">
+          </div>
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg\" alt=\"\">
+          </div>
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg\" alt=\"\">
+          </div>
+      </div>
+      <div class=\"grid gap-4\">
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg\" alt=\"\">
+          </div>
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg\" alt=\"\">
+          </div>
+          <div>
+              <img class=\"h-auto max-w-full rounded-lg\" src=\"https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg\" alt=\"\">
+          </div>
+      </div>
+
+    </div>";
+?>
