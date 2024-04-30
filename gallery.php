@@ -29,11 +29,11 @@
           </button>
           </li>
           <li class="flex items-center">
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+            <a href="https://krismannino.com/" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li>
         
           <li class="flex items-center">
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+            <a href="mailto:krismannino@gmail.com" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
           </li>
         </ul>
       </div>
@@ -63,11 +63,6 @@
   </nav>
 
 
-
-   
-
-    <div style="text-align: center;">
-    </div>
     <div class="gallery-container grid grid-cols-1 md:grid-cols-4 gap-4 column-count-4 column-gap-4">
   <div class="grid gap-4">
         <?php
@@ -86,7 +81,7 @@
             while ($row = mysqli_fetch_assoc($result)){
 
 
-                  echo "<!--<div class=\"mb-4 break-inside-avoid\">-->
+                  echo "<!--<div class=\"mb-4 break-inside-avoid \">-->
                             <div class=\"shadow-lg\">
                             <img class=\"h-auto max-w-full rounded-lg \" src=images/gallery/".$row['imgFullNameGallery']." alt=\"user image\">
                             <h3 class='mt-4 text-lg font-semibold shadow-md'>".$row['titleGallery']."</h3>
