@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 body, html {
-  max-height: 100vh; /* 100% of the viewport height */
-  overflow-y: auto; /* Allows scrolling if content is taller than the screen */
+  max-height: 100vh; 
+  overflow-y: auto; 
 }
 
 body{
   background-color: white;
   font-family: 'Raleway', sans-serif;
   padding-bottom: 50px;
+  padding-top: 75px;
 
 }
 footer {

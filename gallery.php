@@ -10,37 +10,37 @@
 </head>
 <body>
   <!-- Navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 bg-white fixed top-0 w-full shadow-md">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <a href="https://krismannino.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="images/Kris-Logo-512x512.png" class="h-8" alt="Kris' Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kris Mannino</span>
+          <span class="text-4xl font-extrabold self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kris Mannino</span>
       </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
+
       <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        
+        <ul class="align-middle font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li class="flex items-center">
+          <h1 class="flex items-center text-4xl font-extrabold leading-none tracking-tight " >Gallery</h1>
+          </li>
           <li>
+          <!-- Toggle form -->
+          <button onclick="toggleForm()" id="toggleBtn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            Add Image
+          </button>
+          </li>
+          <li class="flex items-center">
             <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li>
         
-          <li>
+          <li class="flex items-center">
             <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav>
-
-
-
+      <!-- Form hidden -->
   <div id="formContainer" class="hidden">
-      <div class="gallery-upload mt-6 mx-auto max-w-md p-4 border rounded">
+      <div class="gallery-upload mt-6 mx-auto max-w-md p-4 border rounded mb-4">
         <form action="gallery_upload.php" method="post" enctype="multipart/form-data" class="max-w-sm mx-auto">
         <div class="mb-5">
           <input type="text" name="filename" placeholder="File name..." class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
@@ -60,15 +60,11 @@
         </form>
       </div>
     </div>
+  </nav>
 
-    <div style="text-align: center;">
-      <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight " >Gallery</h1>
 
-      <!-- Toggle form -->
-      <button onclick="toggleForm()" id="toggleBtn" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-        Add Image
-      </button>
-    </div>    
+
+   
 
     <div style="text-align: center;">
     </div>
@@ -91,9 +87,11 @@
 
 
                   echo "<!--<div class=\"mb-4 break-inside-avoid\">-->
-                            <img class=\"h-auto max-w-full rounded-lg shadow-lg\" src=images/gallery/".$row['imgFullNameGallery']." alt=\"user image\">
+                            <div class=\"shadow-lg\">
+                            <img class=\"h-auto max-w-full rounded-lg \" src=images/gallery/".$row['imgFullNameGallery']." alt=\"user image\">
                             <h3 class='mt-4 text-lg font-semibold shadow-md'>".$row['titleGallery']."</h3>
                             <p>".$row['descGallery']."</p>
+                            </div>
                         <!--</div>-->";
             }
           }
