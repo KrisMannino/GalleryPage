@@ -63,8 +63,8 @@
   </nav>
 
 
-    <div class="gallery-container grid grid-cols-1 md:grid-cols-4 gap-4 column-count-4 column-gap-4">
-  <div class="grid gap-4">
+    <div class="gallery-container grid grid-cols-1 md:grid-cols-4 gap-4 ">
+  <!-- <div class="grid gap-4"> -->
         <?php
 
           include("connect.php");
@@ -81,18 +81,16 @@
             while ($row = mysqli_fetch_assoc($result)){
 
 
-                  echo "<!--<div class=\"mb-4 break-inside-avoid \">-->
-                            <div class=\"shadow-lg\">
-                            <img class=\"h-auto max-w-full rounded-lg \" src=images/gallery/".$row['imgFullNameGallery']." alt=\"user image\">
-                            <h3 class='mt-4 text-lg font-semibold shadow-md'>".$row['titleGallery']."</h3>
-                            <p>".$row['descGallery']."</p>
-                            </div>
-                        <!--</div>-->";
+              echo "<div class=\"shadow-lg rounded-lg overflow-hidden\">";
+              echo "<img class=\"p-4\" src=\"images/gallery/" . $row['imgFullNameGallery'] . "\" alt=\"user image\" class=\"h-auto max-w-full\">";
+              echo "<h3 class='mt-4 text-lg font-semibold shadow-md p-2'>" . $row['titleGallery'] . "</h3>";
+              echo "<p class='p-2'>" . $row['descGallery'] . "</p>";
+              echo "</div>";
             }
           }
         ?>
 
-      </div>
+      <!-- </div> -->
     </div>
 
 <!-- Footer sticky -->

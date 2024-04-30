@@ -37,17 +37,6 @@ h3{
   column-gap: 1rem;
 }
 
-@media (max-width: 768px) {
-  .gallery-container {
-      column-count: 2;
-  }
-}
-
-@media (max-width: 500px) {
-  .gallery-container {
-      column-count: 1;
-  }
-}
 
 .break-inside-avoid {
   break-inside: avoid;
@@ -55,4 +44,11 @@ h3{
 }
 button{
   margin: 7px;
+}
+@media (min-width: 768px) { 
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 1rem; 
+  }
 }
