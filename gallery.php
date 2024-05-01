@@ -29,7 +29,7 @@
           </button>
           </li>
           <li class="flex items-center">
-            <a href="https://github.com/KrisMannino" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+            <a href="https://github.com/KrisMannino/GalleryPage" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
           </li>
         
           <li class="flex items-center">
@@ -86,6 +86,8 @@
               . "</a>"
               . "<h3 class='text-4xl font-semibold shadow-md p-2 text-center'>" . htmlspecialchars($row['titleGallery']) . "</h3>"
               . "<p class='p-1 text-l text-center'>" . htmlspecialchars($row['descGallery']) . "</p>"
+              . "<a href='update_Image.php?id=" . $row['idGallery'] . "'><button type='button'  class='edit-btn shadow-lg  bg-transparent hover:bg-gray-300 text-black-700 font-semibold hover:text-white py-1 px-1 border border-gray-300 hover:border-transparent rounded'>Edit</button></a>"
+
               . "</div>";
               
             }
@@ -103,7 +105,7 @@
   </span>
   <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
       <li>
-          <a href="https://github.com/KrisMannino" class="hover:underline me-4 md:me-6">About</a>
+          <a href="https://github.com/KrisMannino/GalleryPage" class="hover:underline me-4 md:me-6">About</a>
       </li>
 
       <li>

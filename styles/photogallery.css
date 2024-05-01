@@ -59,3 +59,12 @@ h3{
 button{
   margin: 7px;
 }
+.edit-btn {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .edit-btn {
+  display: block;
+  opacity: 1;
+}
