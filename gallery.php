@@ -10,7 +10,7 @@
 </head>
 <body>
   <!-- Navbar -->
-<nav class="bg-white border-gray-200 dark:bg-gray-900 bg-white fixed top-0 w-full shadow-md">
+<nav class="bg-white border-gray-200 dark:bg-gray-900 bg-white fixed top-0 w-full shadow-md z-60">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="https://krismannino.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="images/Kris-Logo-512x512.png" class="h-8" alt="Kris' Logo" />
@@ -39,7 +39,7 @@
       </div>
     </div>
       <!-- Form hidden -->
-  <div id="formContainer" class="hidden">
+  <div id="formContainer" class="hidden z-10">
       <div class="gallery-upload mt-6 mx-auto max-w-md p-4 border rounded mb-4">
         <form action="gallery_upload.php" method="post" enctype="multipart/form-data" class="max-w-sm mx-auto">
         <div class="mb-5">
@@ -63,8 +63,7 @@
   </nav>
 
 
-    <div class="gallery-container grid grid-cols-1 md:grid-cols-4 gap-4 ">
-  <!-- <div class="grid gap-4"> -->
+    <div class="gallery-container">
         <?php
 
           include("connect.php");
@@ -81,20 +80,21 @@
             while ($row = mysqli_fetch_assoc($result)){
 
 
-              echo "<div class=\"shadow-lg rounded-lg overflow-hidden bg-white\">";
-              echo "<img class=\"p-3\" src=\"images/gallery/" . $row['imgFullNameGallery'] . "\" alt=\"user image\" class=\"h-auto max-w-full\">";
-              echo "<h3 class='text-4xl font-semibold shadow-md p-2'>" . $row['titleGallery'] . "</h3>";
-              echo "<p class='p-2'>" . $row['descGallery'] . "</p>";
-              echo "</div>";
+              echo "<div class='gallery-item break-inside-avoid flex flex-col items-center justify-center p-1 bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-500 relative z-10' onmouseenter='mouseHover(this)' onmouseleave='mouseLeave()'>"
+              . "<a href='images/gallery/" . htmlspecialchars($row['imgFullNameGallery']) . "'>"
+              . "<img src='images/gallery/" . htmlspecialchars($row['imgFullNameGallery']) . "' alt='user image' class='h-auto max-w-full'>"
+              . "</a>"
+              . "<h3 class='text-4xl font-semibold shadow-md p-2 text-center'>" . htmlspecialchars($row['titleGallery']) . "</h3>"
+              . "<p class='p-1 text-l text-center'>" . htmlspecialchars($row['descGallery']) . "</p>"
+              . "</div>";
+              
             }
           }
         ?>
-
-      <!-- </div> -->
     </div>
 
 <!-- Footer sticky -->
-<footer class="footer fixed bottom-0 left-0  w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+<footer class="footer fixed bottom-0 left-0  w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600 z-60">
   <span class="text-md text-gray-500 sm:text-center dark:text-gray-400">
     <a href="https://KrisMannino.com/" class="hover:underline">
     
@@ -114,6 +114,7 @@
     </li>
   </ul>
 </footer>
+
 <script src="scripts/main.js"></script>
 </body>
 </html>
