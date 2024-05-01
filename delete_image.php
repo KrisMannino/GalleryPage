@@ -11,11 +11,11 @@ if (isset($_POST['idGallery'])) {
             if(mysqli_stmt_execute($stmt)) {
                 echo "<script>alert('Image deleted successfully.'); window.location.href='gallery.php';</script>";
             } else {
-                echo "ERROR: Could not execute query: " . mysqli_error($con);
+                echo "ERROR: Could not execute sql: " . mysqli_error($con);
             }
             mysqli_stmt_close($stmt);
         } else {
-            echo "ERROR: Could not prepare query: " . mysqli_error($con);
+            echo "ERROR: Could not prepare sql: " . mysqli_error($con);
         }
     } else {
         // Confirmation form for image deletion

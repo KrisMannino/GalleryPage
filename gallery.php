@@ -6,7 +6,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/photogallery.css">
 
-  <title>Document</title>
+  <title>Gallery</title>
 </head>
 <body>
   <!-- Navbar -->
@@ -63,7 +63,7 @@
   </nav>
 
 
-    <div class="gallery-container">
+    <div class="gallery-container pb-6">
         <?php
 
           include("connect.php");

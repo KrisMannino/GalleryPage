@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
     if($fileError == 0){
       if($fileSize < 20000000){
         $imageFullName = $newFileName . "." . uniqid("", true) . "." . $fileActualExt;
-// Check link for gallery images
+// Check link for gallery images = ok
         $fileDestination = "images/gallery/" . $imageFullName;
 
         //connect to DB Kris!
@@ -63,7 +63,7 @@ if(isset($_POST['submit'])){
           }
 
         }else{
-          //check image folder relative link
+          //check image folder relative link = ok
           header("Location: gallery.php?upload=success");
 
         }
